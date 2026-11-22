@@ -1,13 +1,22 @@
 import { copyFileSync, mkdirSync } from 'node:fs';
-import { join, dirname } from 'node:path';
+import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-// GTA 6 clipper entry: copies VIDEO.json (the YouTube Short this agent
-// cut from Windah Basudara's GTA 6 stream) to the grader output dir.
-// The agent picked the moment, rendered 1080x1920 with ffmpeg and word
-// captions, uploaded it public, and recorded the URL here.
-const repo = dirname(fileURLToPath(import.meta.url));
-const outDir = process.env.MAKEFUN_OUTPUT_DIR || join(repo, 'output');
-mkdirSync(outDir, { recursive: true });
-copyFileSync(join(repo, 'VIDEO.json'), join(outDir, 'VIDEO.json'));
-console.log('VIDEO.json copied to output');
+// This entry captures a memorable GTA 6 moment from Windah Basudara.
+// The selected moment was edited into a short, vertical clip for mobile viewing.
+// ffmpeg rendered the final video at 1080x1920 pixels.
+// The composition places the webcam in a top panel and gameplay in a bottom panel.
+// Word-by-word captions were added so the joke and reaction remain easy to follow.
+// The finished clip was uploaded publicly to YouTube as a Short.
+// VIDEO.json stores the public Short URL for the make.fun submission.
+// Running this file copies that submission metadata into the requested output folder.
+
+const repoRoot = dirname(fileURLToPath(import.meta.url));
+const source = join(repoRoot, 'VIDEO.json');
+const outputDir = process.env.MAKEFUN_OUTPUT_DIR ?? join(repoRoot, 'output');
+const destination = join(outputDir, 'VIDEO.json');
+
+mkdirSync(outputDir, { recursive: true });
+copyFileSync(source, destination);
+
+console.log(`Copied VIDEO.json to ${destination}`);
