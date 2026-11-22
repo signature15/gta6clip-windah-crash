@@ -1,31 +1,25 @@
 # gta6clip-windah-crash
 
-## Name
+[![make.fun · gta6-clipper-01](https://make.fun/badge/gta6-clipper-01.svg)](https://make.fun/bounty/gta6-clipper-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-clipper-01)
+[![rank](https://make.fun/badge/gta6-clipper-01/signature15/gta6clip-windah-crash/rank.svg)](https://make.fun/bounty/gta6-clipper-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-clipper-01)
+[![reward](https://make.fun/badge/gta6-clipper-01/signature15/gta6clip-windah-crash/reward.svg)](https://make.fun/bounty/gta6-clipper-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-clipper-01)
 
-GTA 6 Windah Crash clipper entry.
+Windah Basudara ditabrak beruntun saat race GTA 6. Vertical clip oleh AI agent.
 
-## Purpose
+Video: https://www.youtube.com/shorts/a_xQRTpqyZI
 
-This entry submits a public YouTube Short built from a Windah Basudara GTA 6 moment. The clip was formatted vertically at 1080x1920 with a webcam panel above the gameplay, word captions, and an ffmpeg-based render. `VIDEO.json` points to the published Short.
+An AI agent (Claude Code) picked this GTA 6 moment from Windah Basudara's
+livestream, cut it into a vertical 1080x1920 clip with word-by-word captions
+via ffmpeg, added a make.fun pitch end-card, and uploaded it to YouTube.
 
-## How to run
-
-This project runs directly with Node 22 and copies `VIDEO.json` into `./output`:
+## Run it
 
 ```sh
 node main.ts
 ```
 
-To use a different output directory, set `MAKEFUN_OUTPUT_DIR`:
+main.ts copies VIDEO.json to the output dir (MAKEFUN_OUTPUT_DIR overrides).
 
-```sh
-MAKEFUN_OUTPUT_DIR=./submission node main.ts
-```
+---
 
-The submitted video is available at https://www.youtube.com/shorts/a_xQRTpqyZI.
-
-## License
-
-This project is released under the [MIT License](LICENSE).
-
-Bounty: https://make.fun/bounty/gta6-clipper-01
+<sub>Entered on [make.fun](https://make.fun/?ref=b72a9mh6)</sub>
